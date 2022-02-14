@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arena Shooter Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Arena Shooter Calculator</h1>
+    </header>
+
+    <section>
+        <div id="jogo">
+           <p>Choose your game:</p>
+            <input type="radio" name="radiojogo" id="valo" checked>
+            <label for="valo">Valorant</label>
+            <input type="radio" name="radiojogo" id="csgo">
+            <label for="csgo">CS:GO</label>
+        </div>
+        <div id="dados">
+            DPI:
+            <input type="number" min="0" step="0.001" id="dpinum">
+            <p>Sensitivity:
+            <input type="number" min="0" step="0.001" id="sensenum"></p>
+        </div> 
+
+        <div id="process">
+            <input class="button-30" type="button" value="Get Results" onclick="processData()">
+        </div>
+    </section>
+    <section>
+        <h4>
+            Your Results:
+        </h4>
+        <div id="results">
+            <p><label id="valEDPI">Valorant eDPI:</label></p>
+            <p><label id="csgoEDPI"></label></p>
+            <p>Mousepad Distance:<label id="dstCm"></label></p>
+            <p><label id="csgoSense" >Target CS:GO Sensitivity:</label></p>
+        </div>
+    </section>
+    <section>
+        <h4>Statistics:</h4>
+        <div id="chart">
+            <canvas id="myChart" width="400" height="400">
+            </canvas>
+        </div>
+        <label id="disc"><i>(Based on 637 professional players, data taken of prosettings.net)</i></label>
+    </section>
+    <section>
+        <h4>Target DPI's and Sensitivity</h4>
+        <table id="tabela">
+            <thead id="thead">
+                <tbody id="tbody">
+                    <tr id="tr0">
+                        <th id="th0"></th>
+                        <th id="th1"></th>
+                        <th id="th2"></th>
+                    </tr>
+                    <tr id="col0">
+                        <td id="priDados0"> </td>
+                        <td id="segDados0"> </td>
+                        <td id="terDados0"> </td>
+                    </tr>
+                    <tr id="col1">
+                        <td id="priDados1"> </td>
+                        <td id="segDados1"> </td>
+                        <td id="terDados1"> </td>
+                    </tr>
+                    <tr id="col2">
+                        <td id="priDados2"> </td>
+                        <td id="segDados2"> </td>
+                        <td id="terDados2"> </td>
+                    </tr>
+                    <tr id="col3">
+                        <td id="priDados3"> </td>
+                        <td id="segDados3"> </td>
+                        <td id="terDados3"> </td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+    </section>
+    <footer>
+        <p><a id="gitlink" href="https://github.com/hatumgit/236meteo"><img id="gitimg" src="dados/giticon.png" alt="git">hatum</a></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" 
+    integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer">
+    </script>
+    <script src="script.js"></script>
+</body> 
+</html>
