@@ -1,6 +1,6 @@
 # Arena Shooter Calculator
 
-Hosted on: https://hatumgit.github.io/arenashooter/
+Hosted on: https://alexandresanchograca.github.io/arenashooter/
 
 ENG: Simple website that takes your DPI and Sensitivity of CS:GO or Valorant and gives you your eDPI, distance 360/cm, and target sensitivity for cs:go or valorant if you want the same sense across both games.
 
